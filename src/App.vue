@@ -9,7 +9,6 @@ export default {
 
 <template>
   <AppTitle />
-  <p>Ciao</p>
 </template>
 
 <style ></style>

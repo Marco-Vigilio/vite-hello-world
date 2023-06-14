@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-            message: "Salve"
+            message: "La mia prima app con Vite!",
         }
     }
 }
@@ -10,7 +10,6 @@ export default {
 
 <template>
     <h1>{{ message }}</h1>
-    <p>Buongiorno</p>
 </template>
 
 <style>
