@@ -1,13 +1,16 @@
 <script>
 export default {
     data() {
-        message: "Salve"
+        return {
+            message: "Salve"
+        }
     }
 }
 </script>
 
 <template>
     <h1>{{ message }}</h1>
+    <p>Buongiorno</p>
 </template>
 
 <style>
