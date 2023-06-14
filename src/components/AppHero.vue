@@ -1,40 +1,54 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
+<script>
+import AppTitle from "./AppTitle.vue";
+export default {
+    components: {
+        AppTitle,
+    },
+    data() {
+        return {
+            jumbo: "JUMBO",
+            tron: "TRON",
+            contatore: 0,
+        }
+    },
+    methods: {
+        incrementaContatore() {
+            this.contatore++
+        }
+    }
+}
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+    <div>
+        <span class="blue">{{ jumbo }}</span><span class="yellow">{{ tron }}</span>
+        <AppTitle />
+        <p>Contatore {{ contatore }}</p>
+        <button @click="incrementaContatore">Click</button>
+    </div>
 </template>
 
-<style scoped>
-.read-the-docs {
-  color: #888;
+<style>
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(238, 221, 255);
+}
+
+span {
+    font-size: 4rem;
+}
+
+.yellow {
+    color: rgb(255, 180, 29);
+}
+
+.blue {
+    color: rgba(0, 0, 131, 0.747);
+}
+
+button {
+    padding: .5rem;
 }
 </style>

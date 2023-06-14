@@ -15,6 +15,6 @@ export default {
 <style>
 h1 {
     font-size: 1.5rem;
-    color: aqua;
+    color: rgb(29, 90, 90);
 }
 </style>
